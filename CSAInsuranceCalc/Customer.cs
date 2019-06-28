@@ -9,8 +9,8 @@ namespace CSAInsuranceCalc
     class Customer
     {
 
-        public double Discount;
-        public double Premium;
+        public virtual double Discount { get; set; }
+        public virtual double Premium { get; set; }
         public int CustomerID { get; set; }
         public string FName { get; set; }
         public string LName { get; set; }

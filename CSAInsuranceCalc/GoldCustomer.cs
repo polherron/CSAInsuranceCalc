@@ -9,8 +9,8 @@ namespace CSAInsuranceCalc
     class GoldCustomer : Customer
     {
 
-        public new double Discount;
-        public new double Premium;
+        public override double Discount { get; set; }
+        public override double Premium { get; set; }
 
         ///Constructor                
         public GoldCustomer(int customerID,
