@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<states>
+<state>
+  <code>NE</code>
+  <name>Nebraska</name>
+</state>
+<state>
+  <code>NV</code>
+  <name>Nevada</name>
+</state>
+<state>
+  <code>NH</code>
+  <name>New Hampshire</name>
+</state>
+<state>
+  <code>NJ</code>
+  <name>New Jersey</name>
+</state>
+<state>
+  <code>TX</code>
+  <name>Texas</name>
+</state>
+<state>
+  <code>UT</code>
+  <name>Utah</name>
+</state>
+<state>
+  <code>VT</code>
+  <name>Vermont</name>
+</state>
+<state>
+  <code>VA</code>
+  <name>Virginia</name>
+</state>
+<state>
+  <code>WA</code>
+  <name>Washington</name>
+</state>
+<state>
+  <code>WV</code>
+  <name>West Virginia</name>
+</state>
+<state>
+  <code>WI</code>
+  <name>Wisconsin</name>
+</state>
+<state>
+  <code>WY</code>
+  <name>Wyoming</name>
+</state>
+</states>

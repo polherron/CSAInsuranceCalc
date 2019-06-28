@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<states>
+  <state>
+  <code>CA</code>
+    <name>California</name>
+  </state>
+   <state>
+    <code>FL</code>
+    <name>Florida</name>
+  </state>
+   <state>
+    <code>HI</code>
+    <name>Hawaii</name>
+  </state>
+   <state>
+    <code>NH</code>
+    <name>New Hampshire</name>
+  </state>
+ </states>
+
