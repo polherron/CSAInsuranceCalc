@@ -20,7 +20,7 @@ namespace CSAInsuranceCalc
             List<State> states = (from state in xdoc.Element("states").Elements("state")
                           select new State
                           {
-                              StateName = (string)state.Element("name").Value,
+                              StateName = (string)state.Element("code").Value,
                               StateAbbreviation = (string)state.Element("code").Value
                           }).ToList();
 

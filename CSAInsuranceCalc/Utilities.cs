@@ -61,12 +61,6 @@ namespace CSAInsuranceCalc
             && CheckCustomerBlacklisted(customerNumber));
         }
 
-        internal static bool CheckPlatinumState(string stateName)
-        {
-            List<State> states = Model.GetPlatinumStates();
-            return states.Any(st => st.StateName == stateName);
-        }
-
         /// <summary>
         /// Validates inputs
         /// Customer ID is an integer
