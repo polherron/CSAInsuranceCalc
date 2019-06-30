@@ -91,7 +91,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="data\usStates.xml" />
-    <Content Include="data\PlatinumStates.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

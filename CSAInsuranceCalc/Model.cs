@@ -53,18 +53,5 @@ namespace CSAInsuranceCalc
         {
             return File.ReadAllText("..\\..\\data\\BlacklistedCustomers.txt");
         }
-
-        internal static List<State> GetPlatinumStates()
-        {
-            XDocument xdoc = XDocument.Load("../../data/PlatinumStates.xml");
-            List<State> states = (from state in xdoc.Element("states").Elements("state")
-                                  select new State
-                                  {
-                                      StateName = (string)state.Element("code").Value,
-                                      StateAbbreviation = (string)state.Element("name").Value
-                                  }).ToList();
-
-            return states;
-        }
     }
 }
