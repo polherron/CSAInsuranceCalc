@@ -16,7 +16,7 @@ namespace CSAInsuranceCalc
         /// <returns>List<State></returns>
         internal static List<State> GetBlacklistedStates()
         {
-            XDocument xdoc = XDocument.Load("../../data/BlacklistedStates.xml");
+            XDocument xdoc = XDocument.Load("../../data/usStates.xml");
             List<State> states = (from state in xdoc.Element("states").Elements("state")
                           select new State
                           {
