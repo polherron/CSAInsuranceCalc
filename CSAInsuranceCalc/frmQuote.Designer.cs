@@ -43,6 +43,7 @@
             this.blbQuote = new System.Windows.Forms.Label();
             this.lnlDiscount = new System.Windows.Forms.Label();
             this.txtPremium = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnGetQuote
@@ -168,11 +169,22 @@
             this.txtPremium.Size = new System.Drawing.Size(100, 22);
             this.txtPremium.TabIndex = 15;
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(544, 373);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 34);
+            this.btnSave.TabIndex = 17;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // frmQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 496);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lnlDiscount);
             this.Controls.Add(this.txtPremium);
             this.Controls.Add(this.blbQuote);
@@ -212,6 +224,7 @@
         private System.Windows.Forms.Label blbQuote;
         private System.Windows.Forms.Label lnlDiscount;
         private System.Windows.Forms.TextBox txtPremium;
+        private System.Windows.Forms.Button btnSave;
     }
 }
 

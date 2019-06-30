@@ -61,10 +61,31 @@ namespace CSAInsuranceCalc
             && CheckCustomerBlacklisted(customerNumber));
         }
 
+        /// <summary>
+        /// Retruns true if stateName does not exist in list.
+        /// </summary>
+        /// <param name="stateName"></param>
+        /// <returns></returns>
         internal static bool CheckPlatinumState(string stateName)
         {
             List<State> states = Model.GetPlatinumStates();
             return states.Any(st => st.StateName == stateName);
+        }
+
+        /// <summary>
+        /// Return false if Discount or Quote text boxes are null.
+        /// </summary>
+        /// <param name="txtQuote"></param>
+        /// <param name="txtDiscount"></param>
+        /// <returns></returns>
+        internal static bool ValidateFormQuote(string txtQuote, string txtDiscount)
+        {
+            return txtDiscount != null && txtQuote != null;
+        }
+
+        internal static void SaveQuote(string idNo, string fName, string lName, string txtQuote, string textxtDiscountt5)
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>

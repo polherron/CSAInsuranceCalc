@@ -45,22 +45,22 @@ namespace CSAInsuranceCalc
         {
 
             //Calls validation method
-            if (!Utilities.ValidateForm(txtCustomerID, txtFName, txtLName))
+            if (ValidateForm())
             {
                 MessageBox.Show("You mut enter a valid ID Number, first and last name");
             }
 
             int customerNumber;
-           
+
 
             int.TryParse(txtCustomerID.Text, out customerNumber);
             bool blacklisted = Utilities.CheckBlacklisted(cbStates.SelectedItem.ToString(), customerNumber);
             bool platinumState = Utilities.CheckPlatinumState(cbStates.SelectedText.ToString());
             bool over25 = Utilities.CheckOver25(dtPicker.Value);
-            
+
             if (!blacklisted && over25)
             {
-                myCustomer = new GoldCustomer(customerNumber,txtFName.Text , txtLName.Text);
+                myCustomer = new GoldCustomer(customerNumber, txtFName.Text, txtLName.Text);
             }
             else
             {
@@ -73,5 +73,28 @@ namespace CSAInsuranceCalc
             }
         }
 
+        private bool ValidateForm()
+        {
+            return !Utilities.ValidateForm(txtCustomerID, txtFName, txtLName);
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (ValidateQuote() && ValidateForm())
+            {
+                Utilities.SaveQuote(txtCustomerID.Text, txtFName.Text, txtLName.Text, txtDiscount.Text, txtPremium.Text);
+            }
+            else
+            {
+                MessageBox.Show("You mut enter a valid ID Number, " +
+                    "first and last name and then " +
+                    "click Quote");
+            }
+        }
+
+        private bool ValidateQuote()
+        {
+            return Utilities.ValidateFormQuote(txtPremium.Text, txtDiscount.Text);
+        }
     }
 }
