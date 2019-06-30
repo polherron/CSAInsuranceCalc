@@ -54,7 +54,7 @@ namespace CSAInsuranceCalc
            
 
             int.TryParse(txtCustomerID.Text, out customerNumber);
-            bool blacklisted = Utilities.CheckBlacklisted(cbStates.SelectedText.ToString(), customerNumber);
+            bool blacklisted = Utilities.CheckBlacklisted(cbStates.Text, customerNumber);
             bool over25 = Utilities.CheckOver25(dtPicker.Value);
             
             if (!blacklisted && over25)
