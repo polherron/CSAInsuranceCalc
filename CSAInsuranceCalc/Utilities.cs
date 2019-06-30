@@ -38,7 +38,7 @@ namespace CSAInsuranceCalc
                 int number;
                 if (int.TryParse(item, out number))
                 {
-                    if (number == i)
+                    if (number != i)
                     {
                         return true;
                     }
