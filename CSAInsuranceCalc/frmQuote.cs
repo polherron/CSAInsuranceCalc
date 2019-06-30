@@ -54,13 +54,17 @@ namespace CSAInsuranceCalc
            
 
             int.TryParse(txtCustomerID.Text, out customerNumber);
-            bool blacklisted = Utilities.CheckBlacklisted(cbStates.SelectedItem.ToString(), customerNumber);
+            bool blacklisted = Utilities.CheckBlacklisted(cbStates.Text, customerNumber);
             bool platinumState = Utilities.CheckPlatinumState(cbStates.SelectedText.ToString());
             bool over25 = Utilities.CheckOver25(dtPicker.Value);
-            
-            if (!blacklisted && over25)
+
+            if (!blacklisted && over25 && !platinumState)
             {
-                myCustomer = new GoldCustomer(customerNumber,txtFName.Text , txtLName.Text);
+                myCustomer = new GoldCustomer(customerNumber, txtFName.Text, txtLName.Text);
+            }
+            else if (!blacklisted && over25 && platinumState)
+            {
+                myCustomer = new PlatinumCustomer(customerNumber, txtFName.Text, txtLName.Text);
             }
             else
             {
