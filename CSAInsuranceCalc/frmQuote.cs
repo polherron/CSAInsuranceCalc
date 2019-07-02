@@ -15,8 +15,8 @@ namespace CSAInsuranceCalc
     public partial class frmQuote : Form
     {
 
-        List<State> usStates = new List<State>();
-        List<Blacklist> blackList = new List<Blacklist>();
+        List<State> usStates;
+        List<Blacklist> blackList;
         Customer myCustomer;
 
         public frmQuote()
