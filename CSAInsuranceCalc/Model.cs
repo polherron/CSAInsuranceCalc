@@ -16,15 +16,16 @@ namespace CSAInsuranceCalc
         /// <returns>List<State></returns>
         internal static List<State> GetBlacklistedStates()
         {
-            XDocument xdoc = XDocument.Load("../../data/BlacklistedStates.xml");
-            List<State> states = (from state in xdoc.Element("states").Elements("state")
-                          select new State
-                          {
-                              StateName = (string)state.Element("name").Value,
-                              StateAbbreviation = (string)state.Element("code").Value
-                          }).ToList();
 
-            return states;
+                XDocument xdoc = XDocument.Load("../../data/BlacklistedStates.xml");
+                List<State> states = (from state in xdoc.Element("states").Elements("state")
+                                      select new State
+                                      {
+                                          StateName = (string)state.Element("code").Value,
+                                          StateAbbreviation = (string)state.Element("code").Value
+                                      }).ToList();
+
+                return states;
         }
 
         /// <summary>

@@ -57,8 +57,8 @@ namespace CSAInsuranceCalc
         /// <returns>bool</returns>
         internal static bool CheckBlacklisted(string state, int customerNumber)
         {
-            return (CheckStateBlacklisted(state)
-            || CheckCustomerBlacklisted(customerNumber));
+            return (CheckStateBlacklisted(state) ||
+             CheckCustomerBlacklisted(customerNumber));
         }
 
         internal static bool CheckPlatinumState(string stateName)
