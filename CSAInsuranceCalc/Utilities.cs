@@ -58,7 +58,7 @@ namespace CSAInsuranceCalc
         internal static bool CheckBlacklisted(string state, int customerNumber)
         {
             return (CheckStateBlacklisted(state)
-            && CheckCustomerBlacklisted(customerNumber));
+            || CheckCustomerBlacklisted(customerNumber));
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace CSAInsuranceCalc
             age = DateTime.Now.Year - dob.Year;
             if (DateTime.Now.DayOfYear < dob.DayOfYear)
                 age = age - 1;
-            return age > 24;
+            return age > 25;
         }
     }
 }
